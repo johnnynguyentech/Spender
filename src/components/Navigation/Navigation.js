@@ -9,123 +9,116 @@ class Navigation extends Component {
     selectedNav: "Home"
   }
 
-  onChangeHandler = (event) => {
+  selectHomeHandler = () => {
     this.setState({
-      [event.target.name]: event.target.value
+      selectedNav: "Home"
     });
   }
 
-  selectNavHandler = () => {
-    this.setState({selectedNav: "Expense"});
+  selectExpenseHandler = () => {
+    this.setState({
+      selectedNav: "Expense"
+    });
+  }
+
+  selectHistoryHandler = () => {
+    this.setState({
+      selectedNav: "History"
+    });
+  }
+
+  selectSettingsHandler = () => {
+    this.setState({
+      selectedNav: "Settings"
+    });
   }
 
   render () {
-    console.log(this.state)
-    let footer = (
-      <div className='Navigation'>
-        <div className='NavItem NavItemSelected'>
-          <i className="fas fa-home fa-2x"></i>
-          <h6>Home</h6>
-        </div>
-        <div className='NavItem' onClick={() => this.selectNavHandler()}>
-          <i className="fas fa-dollar-sign fa-2x"></i>
-          <h6>Add Expense</h6>
-        </div>
-        <div className='NavItem'>
-          <i className="fas fa-history fa-2x"></i>
-          <h6>History</h6>
-        </div>
-        <div className='NavItem'>
-          <i className="fas fa-user-cog fa-2x"></i>
-          <h6>Settings</h6>
-        </div>
-      </div>
-    );
-
+    let footer = null;
     if(this.state.selectedNav === "Home"){
-      footer = (
-        <div className='Navigation'>
-          <div className='NavItem NavItemSelected'>
-            <i className="fas fa-home fa-2x"></i>
-            <h6>Home</h6>
-          </div>
-          <div className='NavItem' onClick={() => this.selectNavHandler()}>
-            <i className="fas fa-dollar-sign fa-2x"></i>
-            <h6>Add Expense</h6>
-          </div>
-          <div className='NavItem'>
-            <i className="fas fa-history fa-2x"></i>
-            <h6>History</h6>
-          </div>
-          <div className='NavItem'>
-            <i className="fas fa-user-cog fa-2x"></i>
-            <h6>Settings</h6>
-          </div>
-        </div>
-      );
+        footer = (
+            <div className='Navigation'>
+                <div className='NavItem NavItemSelected' value="Home" onClick={() => this.selectHomeHandler()}>
+                    <i className="fas fa-home fa-2x"></i>
+                    <h6>Home</h6>
+                </div>
+                <div className='NavItem' value="Expense" onClick={() => this.selectExpenseHandler()}>
+                    <i className="fas fa-dollar-sign fa-2x"></i>
+                    <h6>Add Expense</h6>
+                </div>
+                <div className='NavItem' value="History" onClick={() => this.selectHistoryHandler()}>
+                    <i className="fas fa-history fa-2x"></i>
+                    <h6>History</h6>
+                </div>
+                <div className='NavItem' value="Settings" onClick={() => this.selectSettingsHandler()}>
+                    <i className="fas fa-user-cog fa-2x"></i>
+                    <h6>Settings</h6>
+                </div>
+            </div>
+        );
     }else if(this.state.selectedNav === "Expense"){
-      footer = (
-        <div className='Navigation'>
-          <div className='NavItem'>
-            <i className="fas fa-home fa-2x"></i>
-            <h6>Home</h6>
-          </div>
-          <div className='NavItem NavItemSelected'>
-            <i className="fas fa-dollar-sign fa-2x"></i>
-            <h6>Add Expense</h6>
-          </div>
-          <div className='NavItem'>
-            <i className="fas fa-history fa-2x"></i>
-            <h6>History</h6>
-          </div>
-          <div className='NavItem'>
-            <i className="fas fa-user-cog fa-2x"></i>
-            <h6>Settings</h6>
-          </div>
-        </div>
-      );
+        footer = (
+            <div className='Navigation'>
+                <div className='NavItem' value="Home" onClick={() => this.selectHomeHandler()}>
+                    <i className="fas fa-home fa-2x"></i>
+                    <h6>Home</h6>
+                </div>
+                <div className='NavItem NavItemSelected' value="Expense" onClick={() => this.selectExpenseHandler()}>
+                    <i className="fas fa-dollar-sign fa-2x"></i>
+                    <h6>Add Expense</h6>
+                </div>
+                <div className='NavItem' value="History" onClick={() => this.selectHistoryHandler()}>
+                    <i className="fas fa-history fa-2x"></i>
+                    <h6>History</h6>
+                </div>
+                <div className='NavItem' value="Settings" onClick={() => this.selectSettingsHandler()}>
+                    <i className="fas fa-user-cog fa-2x"></i>
+                    <h6>Settings</h6>
+                </div>
+            </div>
+        );
     }else if(this.state.selectedNav === "History"){
-      footer = (
-        <div className='Navigation'>
-          <div className='NavItem'>
-            <i className="fas fa-home fa-2x"></i>
-            <h6>Home</h6>
-          </div>
-          <div className='NavItem'>
-            <i className="fas fa-dollar-sign fa-2x"></i>
-            <h6>Add Expense</h6>
-          </div>
-          <div className='NavItem NavItemSelected'>
-            <i className="fas fa-history fa-2x"></i>
-            <h6>History</h6>
-          </div>
-          <div className='NavItem'>
-            <i className="fas fa-user-cog fa-2x"></i>
-            <h6>Settings</h6>
-          </div>
-        </div>
-      );
+        footer = (
+            <div className='Navigation'>
+                <div className='NavItem' value="Home" onClick={() => this.selectHomeHandler()}>
+                    <i className="fas fa-home fa-2x"></i>
+                    <h6>Home</h6>
+                </div>
+                <div className='NavItem' value="Expense" onClick={() => this.selectExpenseHandler()}>
+                    <i className="fas fa-dollar-sign fa-2x"></i>
+                    <h6>Add Expense</h6>
+                </div>
+                <div className='NavItem NavItemSelected' value="History" onClick={() => this.selectHistoryHandler()}>
+                    <i className="fas fa-history fa-2x"></i>
+                    <h6>History</h6>
+                </div>
+                <div className='NavItem' value="Settings" onClick={() => this.selectSettingsHandler()}>
+                    <i className="fas fa-user-cog fa-2x"></i>
+                    <h6>Settings</h6>
+                </div>
+            </div>
+        );
     }else if(this.state.selectedNav === "Settings"){
-      footer = (
-        <div className='Navigation'>
-          <div className='NavItem'>
-            <i className="fas fa-home fa-2x"></i>
-            <h6>Home</h6>
-          </div>
-          <div className='NavItem'>
-            <i className="fas fa-dollar-sign fa-2x"></i>
-            <h6>Add Expense</h6>
-          </div>
-          <div className='NavItem'>
-            <i className="fas fa-history fa-2x"></i>
-            <h6>History</h6>
-          </div>
-          <div className='NavItem NavItemSelected'>
-            <i className="fas fa-user-cog fa-2x"></i>
-            <h6>Settings</h6>
-          </div>
-        </div>
-      );
+        footer = (
+            <div className='Navigation'>
+                <div className='NavItem' value="Home" onClick={() => this.selectHomeHandler()}>
+                    <i className="fas fa-home fa-2x"></i>
+                    <h6>Home</h6>
+                </div>
+                <div className='NavItem' value="Expense" onClick={() => this.selectExpenseHandler()}>
+                    <i className="fas fa-dollar-sign fa-2x"></i>
+                    <h6>Add Expense</h6>
+                </div>
+                <div className='NavItem' value="History" onClick={() => this.selectHistoryHandler()}>
+                    <i className="fas fa-history fa-2x"></i>
+                    <h6>History</h6>
+                </div>
+                <div className='NavItem NavItemSelected' value="Settings" onClick={() => this.selectSettingsHandler()}>
+                    <i className="fas fa-user-cog fa-2x"></i>
+                    <h6>Settings</h6>
+                </div>
+            </div>
+        );
     }
     
     return (

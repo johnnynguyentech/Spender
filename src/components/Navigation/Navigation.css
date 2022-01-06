@@ -4,15 +4,17 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   border-top: 1px solid grey;
-  padding: 18px 0;
   height: 100px;
   margin-bottom: -100px;
 }
 
 .NavItem {
+  background-color: white;
+  border: none;
   text-align: center;
   color: grey;
   cursor: pointer;
+  padding: 18px 0;
 }
 
 .NavItemSelected {
