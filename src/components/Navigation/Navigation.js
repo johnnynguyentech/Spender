@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
+import { withRouter } from "react-router-dom";
 
 import Aux from '../../hoc/Aux/Aux';
 import './Navigation.css';
@@ -9,28 +9,10 @@ class Navigation extends Component {
     selectedNav: "Home"
   }
 
-  selectHomeHandler = () => {
+  componentDidMount () {
     this.setState({
-      selectedNav: "Home"
-    });
-  }
-
-  selectExpenseHandler = () => {
-    this.setState({
-      selectedNav: "Expense"
-    });
-  }
-
-  selectHistoryHandler = () => {
-    this.setState({
-      selectedNav: "History"
-    });
-  }
-
-  selectSettingsHandler = () => {
-    this.setState({
-      selectedNav: "Settings"
-    });
+        selectedNav: this.props.selected
+      });
   }
 
   render () {
@@ -38,19 +20,19 @@ class Navigation extends Component {
     if(this.state.selectedNav === "Home"){
         footer = (
             <div className='Navigation'>
-                <div className='NavItem NavItemSelected' value="Home" onClick={() => this.selectHomeHandler()}>
+                <div className='NavItem NavItemSelected' onClick={() => this.props.history.push("/home")}>
                     <i className="fas fa-home fa-2x"></i>
                     <h6>Home</h6>
                 </div>
-                <div className='NavItem' value="Expense" onClick={() => this.selectExpenseHandler()}>
+                <div className='NavItem' onClick={() => this.props.history.push("/expense")}>
                     <i className="fas fa-dollar-sign fa-2x"></i>
                     <h6>Add Expense</h6>
                 </div>
-                <div className='NavItem' value="History" onClick={() => this.selectHistoryHandler()}>
+                <div className='NavItem' onClick={() => this.props.history.push("/history")}>
                     <i className="fas fa-history fa-2x"></i>
                     <h6>History</h6>
                 </div>
-                <div className='NavItem' value="Settings" onClick={() => this.selectSettingsHandler()}>
+                <div className='NavItem' onClick={() => this.props.history.push("/settings")}>
                     <i className="fas fa-user-cog fa-2x"></i>
                     <h6>Settings</h6>
                 </div>
@@ -59,19 +41,19 @@ class Navigation extends Component {
     }else if(this.state.selectedNav === "Expense"){
         footer = (
             <div className='Navigation'>
-                <div className='NavItem' value="Home" onClick={() => this.selectHomeHandler()}>
+                <div className='NavItem' onClick={() => this.props.history.push("/home")}>
                     <i className="fas fa-home fa-2x"></i>
                     <h6>Home</h6>
                 </div>
-                <div className='NavItem NavItemSelected' value="Expense" onClick={() => this.selectExpenseHandler()}>
+                <div className='NavItem NavItemSelected' onClick={() => this.props.history.push("/expense")}>
                     <i className="fas fa-dollar-sign fa-2x"></i>
                     <h6>Add Expense</h6>
                 </div>
-                <div className='NavItem' value="History" onClick={() => this.selectHistoryHandler()}>
+                <div className='NavItem' onClick={() => this.props.history.push("/history")}>
                     <i className="fas fa-history fa-2x"></i>
                     <h6>History</h6>
                 </div>
-                <div className='NavItem' value="Settings" onClick={() => this.selectSettingsHandler()}>
+                <div className='NavItem' onClick={() => this.props.history.push("/settings")}>
                     <i className="fas fa-user-cog fa-2x"></i>
                     <h6>Settings</h6>
                 </div>
@@ -80,19 +62,19 @@ class Navigation extends Component {
     }else if(this.state.selectedNav === "History"){
         footer = (
             <div className='Navigation'>
-                <div className='NavItem' value="Home" onClick={() => this.selectHomeHandler()}>
+                <div className='NavItem' onClick={() => this.props.history.push("/home")}>
                     <i className="fas fa-home fa-2x"></i>
                     <h6>Home</h6>
                 </div>
-                <div className='NavItem' value="Expense" onClick={() => this.selectExpenseHandler()}>
+                <div className='NavItem' onClick={() => this.props.history.push("/expense")}>
                     <i className="fas fa-dollar-sign fa-2x"></i>
                     <h6>Add Expense</h6>
                 </div>
-                <div className='NavItem NavItemSelected' value="History" onClick={() => this.selectHistoryHandler()}>
+                <div className='NavItem NavItemSelected' onClick={() => this.props.history.push("/history")}>
                     <i className="fas fa-history fa-2x"></i>
                     <h6>History</h6>
                 </div>
-                <div className='NavItem' value="Settings" onClick={() => this.selectSettingsHandler()}>
+                <div className='NavItem' onClick={() => this.props.history.push("/settings")}>
                     <i className="fas fa-user-cog fa-2x"></i>
                     <h6>Settings</h6>
                 </div>
@@ -101,19 +83,19 @@ class Navigation extends Component {
     }else if(this.state.selectedNav === "Settings"){
         footer = (
             <div className='Navigation'>
-                <div className='NavItem' value="Home" onClick={() => this.selectHomeHandler()}>
+                <div className='NavItem' onClick={() => this.props.history.push("/home")}>
                     <i className="fas fa-home fa-2x"></i>
                     <h6>Home</h6>
                 </div>
-                <div className='NavItem' value="Expense" onClick={() => this.selectExpenseHandler()}>
+                <div className='NavItem' onClick={() => this.props.history.push("/expense")}>
                     <i className="fas fa-dollar-sign fa-2x"></i>
                     <h6>Add Expense</h6>
                 </div>
-                <div className='NavItem' value="History" onClick={() => this.selectHistoryHandler()}>
+                <div className='NavItem' onClick={() => this.props.history.push("/history")}>
                     <i className="fas fa-history fa-2x"></i>
                     <h6>History</h6>
                 </div>
-                <div className='NavItem NavItemSelected' value="Settings" onClick={() => this.selectSettingsHandler()}>
+                <div className='NavItem NavItemSelected' onClick={() => this.props.history.push("/settings")}>
                     <i className="fas fa-user-cog fa-2x"></i>
                     <h6>Settings</h6>
                 </div>
@@ -122,11 +104,11 @@ class Navigation extends Component {
     }
     
     return (
-      <Aux>
-          {footer}
-      </Aux>
+        <Aux>
+            {footer}
+        </Aux>
     )
   }
 }
 
-export default Navigation;
+export default withRouter(Navigation);

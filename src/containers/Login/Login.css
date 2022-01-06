@@ -1,0 +1,58 @@
+.Login {
+  background-color: #14ba41;
+  background-image: linear-gradient(#14ba41, #bfffd1);
+  height: 100%;
+  color: white;
+  text-align: center;
+}
+
+.loginLogo {
+  color: white;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 3.5rem;
+  padding: 150px 0 0px 0;
+  margin-bottom: 0;
+}
+
+.loginLogoBio {
+  padding: 0;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+}
+
+.loginIcon {
+  padding: 50px;
+}
+
+.Login input {
+  display: block;
+  margin: 10px auto;
+  border: none;
+  border-radius: 50px;
+  padding: 7px 20px;
+  width: 80%;
+  font-size: 1.1rem;
+}
+
+.log-or-sign-text {
+  color: #14ba41;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.log-or-sign-btn {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  border: none;
+  border-radius: 50px;
+  padding: 4px;
+  width: 80%;
+  background-color: #14ba41;
+  color: white;
+  margin: 0 0 16px 0;
+  font-size: 1.5rem;
+}

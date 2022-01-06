@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
 
 import Aux from '../../hoc/Aux/Aux';
 import Header from '../../components/Header/Header';
+import Navigation from '../../components/Navigation/Navigation';
 import './History.css';
 
 class History extends Component {
@@ -10,7 +10,8 @@ class History extends Component {
     return (
       <Aux>
         <Header/>
-        <h1>History</h1>
+            <h1>History</h1>
+        <Navigation selected="History"/>
       </Aux>
     )
   }

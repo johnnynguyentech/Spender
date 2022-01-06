@@ -1,0 +1,44 @@
+.Settings {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.settingsContent {
+  margin-top: 36px;
+  padding: 20px;
+  text-align: left;
+}
+
+.Settings h5 {
+  margin: 10px;
+}
+
+.settingsContent h5 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.Settings p {
+  margin: 10px;
+}
+
+.settingsItem {
+  border-top: 1px solid #d1d1d1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.settingsChevron {
+  padding-right: 8px;
+  padding-top: 10px;
+}
+
+.helpAnswer {
+  color: grey;
+  font-size: 0.9rem;
+}
+
+.logoutBtn {
+  color: red;
+}

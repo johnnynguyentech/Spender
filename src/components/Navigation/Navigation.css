@@ -3,9 +3,11 @@
   justify-content: center;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  border-top: 1px solid grey;
-  height: 100px;
-  margin-bottom: -100px;
+  border-top: 1px solid #bdbdbd;
+  height: 80px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .NavItem {
@@ -14,7 +16,7 @@
   text-align: center;
   color: grey;
   cursor: pointer;
-  padding: 18px 0;
+  padding: 12px 0;
 }
 
 .NavItem h6 {
@@ -23,4 +25,11 @@
 
 .NavItemSelected {
   color: #14ba41;
+}
+
+/* Desktop */
+@media only screen and (min-device-width: 576px) {
+  .Navigation {
+    width: 576px;
+  }
 }

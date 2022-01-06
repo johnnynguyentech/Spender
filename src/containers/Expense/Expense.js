@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
 
 import Aux from '../../hoc/Aux/Aux';
 import Header from '../../components/Header/Header';
+import Navigation from '../../components/Navigation/Navigation';
 import './Expense.css';
 
 class Expense extends Component {
@@ -10,7 +10,8 @@ class Expense extends Component {
     return (
       <Aux>
         <Header/>
-        <h1>Expense</h1>
+            <h1>Expense</h1>
+        <Navigation selected="Expense"/>
       </Aux>
     )
   }
