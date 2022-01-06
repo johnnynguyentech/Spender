@@ -1,0 +1,20 @@
+.Navigation {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  border-top: 1px solid grey;
+  padding: 18px 0;
+  height: 100px;
+  margin-bottom: -100px;
+}
+
+.NavItem {
+  text-align: center;
+  color: grey;
+  cursor: pointer;
+}
+
+.NavItemSelected {
+  color: #14ba41;
+}
