@@ -17,6 +17,10 @@
   padding: 18px 0;
 }
 
+.NavItem h6 {
+  font-size: 0.95rem;
+}
+
 .NavItemSelected {
   color: #14ba41;
 }
