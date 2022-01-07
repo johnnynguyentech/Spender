@@ -1,38 +1,6 @@
 .Home {
   margin: 15px;
   text-align: center;
-}
-
-.thisMonth {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.Home h6 {
-  font-weight: 600;
-  color: grey;
-  margin-bottom: 0;
-}
-
-.Home h4 {
-  color: #14ba41;
-  font-size: 2.6rem;
-  font-weight: 700;
-}
-
-.spending {
-  margin: 10px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.spending p {
-  text-align: left;
-  margin: 0;
-}
-
-.category1 {
-  border-bottom: 2px solid red;
+  overflow-y: scroll;
+  height: calc(100% - 175px);
 }

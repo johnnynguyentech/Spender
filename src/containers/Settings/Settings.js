@@ -52,7 +52,7 @@ class Settings extends Component {
                         <p>What is Spender?</p>
                         <i className="fas fa-chevron-down settingsChevron"></i>
                     </div>
-                    <p className='helpAnswer'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p className='helpAnswer'>Spender is a mobile app that allows you to spend, budget, and save! With Spender, you can log in your everyday expenses to keep track of your spending.</p>
                 </Aux>
             );
         }
@@ -60,7 +60,7 @@ class Settings extends Component {
         if(!this.state.help2){
             helpCenter2 = (
                 <div className='settingsItem' onClick={()=>this.onHelp2Handler()}>
-                    <p>How do I use Spender?</p>
+                    <p>How do I add and remove expenses?</p>
                     <i className="fas fa-chevron-right settingsChevron"></i>
                 </div>
             );
@@ -68,10 +68,10 @@ class Settings extends Component {
             helpCenter2 = (
                 <Aux>
                     <div className='settingsItem' onClick={()=>this.onHelp2Handler()}>
-                        <p>How do I use Spender?</p>
+                        <p>How do I add and remove expenses?</p>
                         <i className="fas fa-chevron-down settingsChevron"></i>
                     </div>
-                    <p className='helpAnswer'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p className='helpAnswer'>To add an expense, go to the 'Add Expense' tab and log in your expense. From here, we'll take care of the calculations! To remove an expense, find the expense list on the 'Home' tab, or in any previous month in the 'History' tab and click the 'X' icon. Using Spender is that simple!</p>
                 </Aux>
             );
         }
@@ -79,6 +79,7 @@ class Settings extends Component {
             <Aux>
                 <Header />
                 <div className='Settings'>
+                    <h6 className='page-title'>Settings</h6>
                     <i className="fas fa-user-circle fa-5x"></i>
                     <h5>example@example.com</h5>
                     <div className='settingsContent'>

@@ -1,0 +1,108 @@
+.thisMonth {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.MonthlySpending h6 {
+  font-weight: 600;
+  color: grey;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.MonthlySpending h4 {
+  color: #14ba41;
+  font-size: 2.6rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.chartWrapper {
+  margin: 15px 10px;
+  padding: 25px 15px;
+  background-color: #f5f5f5;
+  /* border: 1px solid #d1d1d1; */
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.spending {
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.spending p {
+  text-align: left;
+  margin: 0;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.category1 span {
+  border-bottom: 3px solid red;
+}
+
+.category2 span {
+  border-bottom: 3px solid orange;
+}
+
+.category3 span {
+  border-bottom: 3px solid yellow;
+}
+
+.category4 span {
+  border-bottom: 3px solid green;
+}
+
+.category5 span {
+  border-bottom: 3px solid blue;
+}
+
+.category6 span {
+  border-bottom: 3px solid purple;
+}
+
+.category7 span {
+  border-bottom: 3px solid violet;
+}
+
+.category8 span {
+  border-bottom: 3px solid pink;
+}
+
+.category9 span {
+  border-bottom: 3px solid black;
+}
+
+.category10 span {
+  border-bottom: 3px solid grey;
+}
+
+.expenseListTitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 30px 0 5px 0;
+  text-align: left;
+}
+
+.expenseItem {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #d1d1d1;
+  color: #212529;
+}
+
+.expenseItem h6 {
+  color: #212529;
+  font-weight: 500;
+}
+
+.expenseItem i {
+  cursor: pointer;
+}

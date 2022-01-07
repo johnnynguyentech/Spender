@@ -1,6 +1,8 @@
 .Settings {
   margin-top: 20px;
   text-align: center;
+  overflow-y: scroll;
+  height: calc(100% - 175px);
 }
 
 .settingsContent {

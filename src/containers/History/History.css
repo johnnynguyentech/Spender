@@ -1,6 +1,28 @@
+.History {
+  margin: 15px;
+  overflow-y: scroll;
+  height: calc(100% - 175px);
+}
+
 .page-title {
   text-align: center;
   font-family: "Montserrat", sans-serif;
   font-size: 1.1rem;
   font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.history-back {
+  display: flex;
+  justify-content: left;
+  color: #14ba41;
+  /* position: absolute;
+  left: 15px;
+  margin-top: 2px; */
+}
+
+.history-back h6 {
+  color: #14ba41;
+  font-weight: 600;
+  margin-left: 5px;
 }

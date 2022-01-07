@@ -10,6 +10,10 @@ body {
   background-color: white;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 /* Desktop */
 @media only screen and (min-device-width: 576px) {
   .App {
