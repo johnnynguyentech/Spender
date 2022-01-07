@@ -4,9 +4,8 @@
 }
 
 .thisMonth {
-  text-align: left;
   font-family: "Montserrat", sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 700;
   margin-bottom: 20px;
 }
@@ -21,4 +20,19 @@
   color: #14ba41;
   font-size: 2.6rem;
   font-weight: 700;
+}
+
+.spending {
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.spending p {
+  text-align: left;
+  margin: 0;
+}
+
+.category1 {
+  border-bottom: 2px solid red;
 }
