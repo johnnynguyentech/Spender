@@ -1,0 +1,21 @@
+.Expense {
+  margin: 15px;
+}
+
+.addOrClear {
+  display: flex;
+  justify-content: space-between;
+}
+
+.addOrClear h6 {
+  color: #14ba41;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.page-title {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+}

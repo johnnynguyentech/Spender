@@ -10,7 +10,14 @@ class Expense extends Component {
     return (
       <Aux>
         <Header/>
-            <h1>Expense</h1>
+        <div className="Expense">
+            <h6 className="page-title">Add Expense</h6>
+            <div className='addOrClear'>
+                <h6>Clear</h6>
+                <h6>Add Expense</h6>
+            </div>
+        </div>
+        
         <Navigation selected="Expense"/>
       </Aux>
     )

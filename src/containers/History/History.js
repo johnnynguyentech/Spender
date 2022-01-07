@@ -10,7 +10,9 @@ class History extends Component {
     return (
       <Aux>
         <Header/>
-            <h1>History</h1>
+        <div className='History'>
+            <h6 className='page-title'>History</h6>
+        </div>
         <Navigation selected="History"/>
       </Aux>
     )
