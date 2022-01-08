@@ -1,6 +1,6 @@
 .Home {
-  margin: 15px;
+  margin: 0 0 15px 0;
   text-align: center;
   overflow-y: scroll;
-  height: calc(100% - 175px);
+  height: calc(100% - 145px);
 }

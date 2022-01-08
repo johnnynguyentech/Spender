@@ -1,6 +1,6 @@
 .Expense {
   overflow-y: scroll;
-  height: calc(100% - 175px);
+  height: calc(100% - 173px);
 }
 
 .clearBtn h6 {
@@ -75,15 +75,15 @@
 }
 
 .expense-form {
-  margin-top: 60px;
+  margin-top: 80px;
   padding-top: 32px;
   background-color: white;
   border-radius: 25px 25px 0 0;
-  margin-bottom: 45px;
+  margin-bottom: 0px;
 }
 
 .expenseHeader {
-  padding-top: 72px;
+  padding-top: 90px;
   color: white;
   text-align: center;
 }

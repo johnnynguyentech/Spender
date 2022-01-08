@@ -18,32 +18,108 @@ class MonthlySpending extends Component {
                 <PieChart
                     animate = "true"
                     data={[
-                        { title: 'One', value: 500, color: 'red' },
-                        { title: 'Two', value: 200, color: 'orange' },
-                        { title: 'Three', value: 400, color: 'yellow' },
-                        { title: 'Four', value: 300, color: 'green' },
-                        { title: 'Five', value: 200, color: 'blue' },
-                        { title: 'Six', value: 0, color: 'purple' },
-                        { title: 'Seven', value: 20, color: 'violet' },
-                        { title: 'Eight', value: 0, color: 'pink' },
-                        { title: 'Nine', value: 0, color: 'black' },
-                        { title: 'Ten', value: 0, color: 'grey' }
+                        { title: 'Housing', value: 500, color: '#330F0A' },
+                        { title: 'Food', value: 200, color: '#394F49' },
+                        { title: 'Transportation', value: 400, color: '#65743A' },
+                        { title: 'Medical/Health', value: 300, color: '#EFDD8D' },
+                        { title: 'Insurance', value: 200, color: '#F4FDAF' },
+                        { title: 'Recreation', value: 100, color: '#98DFEA' },
+                        { title: 'Clothing', value: 200, color: '#07BEB8' },
+                        { title: 'Personal', value: 300, color: '#EFD9CE' },
+                        { title: 'Travel', value: 250, color: '#E08DAC' },
+                        { title: 'Other', value: 80, color: '#6A7FDB' }
                     ]}
                 />
                 <div className='spending'>
-                    <div className='spending-col1'>
-                        <p className='category1'><span>$1000</span> - Housing</p>
-                        <p className='category2'><span>$238</span> - Food</p>
-                        <p className='category3'><span>$45</span> - Transportation</p>
-                        <p className='category4'><span>$200</span> - Medical/Health</p>
-                        <p className='category5'><span>$0</span> - Insurance</p>
+                    <div className='spendingCategory1'>
+                        <div className='spendingCategory2'>
+                            <i class="fas fa-square color1"></i>
+                            <h6>Housing</h6>
+                        </div>
+                        <div className='spendingCategory3'>
+                            <h6>$500</h6>
+                        </div>
                     </div>
-                    <div className='spending-col2'>
-                        <p className='category6'><span>$30</span> - Recreation</p>
-                        <p className='category7'><span>$25</span> - Clothing</p>
-                        <p className='category8'><span>$40</span> - Personal</p>
-                        <p className='category9'><span>$0</span> - Travel</p>
-                        <p className='category10'><span>$20</span> - Other</p>
+                    <div className='spendingCategory1'>
+                        <div className='spendingCategory2'>
+                            <i class="fas fa-square color2"></i>
+                            <h6>Food</h6>
+                        </div>
+                        <div className='spendingCategory3'>
+                            <h6>$200</h6>
+                        </div>
+                    </div>
+                    <div className='spendingCategory1'>
+                        <div className='spendingCategory2'>
+                            <i class="fas fa-square color3"></i>
+                            <h6>Transportation</h6>
+                        </div>
+                        <div className='spendingCategory3'>
+                            <h6>$400</h6>
+                        </div>
+                    </div>
+                    <div className='spendingCategory1'>
+                        <div className='spendingCategory2'>
+                            <i class="fas fa-square color4"></i>
+                            <h6>Medical/Health</h6>
+                        </div>
+                        <div className='spendingCategory3'>
+                            <h6>$300</h6>
+                        </div>
+                    </div>
+                    <div className='spendingCategory1'>
+                        <div className='spendingCategory2'>
+                            <i class="fas fa-square color5"></i>
+                            <h6>Insurance</h6>
+                        </div>
+                        <div className='spendingCategory3'>
+                            <h6>$200</h6>
+                        </div>
+                    </div>
+                    <div className='spendingCategory1'>
+                        <div className='spendingCategory2'>
+                            <i class="fas fa-square color6"></i>
+                            <h6>Recreation</h6>
+                        </div>
+                        <div className='spendingCategory3'>
+                            <h6>$100</h6>
+                        </div>
+                    </div>
+                    <div className='spendingCategory1'>
+                        <div className='spendingCategory2'>
+                            <i class="fas fa-square color7"></i>
+                            <h6>Clothing</h6>
+                        </div>
+                        <div className='spendingCategory3'>
+                            <h6>$200</h6>
+                        </div>
+                    </div>
+                    <div className='spendingCategory1'>
+                        <div className='spendingCategory2'>
+                            <i class="fas fa-square color8"></i>
+                            <h6>Personal</h6>
+                        </div>
+                        <div className='spendingCategory3'>
+                            <h6>$300</h6>
+                        </div>
+                    </div>
+                    <div className='spendingCategory1'>
+                        <div className='spendingCategory2'>
+                            <i class="fas fa-square color9"></i>
+                            <h6>Travel</h6>
+                        </div>
+                        <div className='spendingCategory3'>
+                            <h6>$250</h6>
+                        </div>
+                    </div>
+                    <div className='spendingCategory1'>
+                        <div className='spendingCategory2'>
+                            <i class="fas fa-square color10"></i>
+                            <h6>Other</h6>
+                        </div>
+                        <div className='spendingCategory3'>
+                            <h6>$80</h6>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -51,19 +127,53 @@ class MonthlySpending extends Component {
             <div className='expenseList'>
                 <h3 className='expenseListTitle'>Expenses</h3>
                 <div className='expenseItem'>
-                    <h6>$200 - Medicine</h6>
+                    <div className='expenseItem2'>
+                        <h5>-$200</h5>
+                        <div className='expenseItem3'>
+                            <h6>Medicine</h6>
+                            <p>01-14-2022</p>
+                        </div>
+                    </div>            
                     <i className="fas fa-times"></i>
                 </div>
                 <div className='expenseItem'>
-                    <h6>$14 - Tacos</h6>
+                    <div className='expenseItem2'>
+                        <h5>-$50</h5>
+                        <div className='expenseItem3'>
+                            <h6>Korean Short Ribs</h6>
+                            <p>01-12-2022</p>
+                        </div>
+                    </div>            
                     <i className="fas fa-times"></i>
                 </div>
                 <div className='expenseItem'>
-                    <h6>$1000 - Rent</h6>
+                    <div className='expenseItem2'>
+                        <h5>-$250</h5>
+                        <div className='expenseItem3'>
+                            <h6>Mattress</h6>
+                            <p>01-11-2022</p>
+                        </div>
+                    </div>            
                     <i className="fas fa-times"></i>
                 </div>
                 <div className='expenseItem'>
-                    <h6>$30 - Shirt</h6>
+                    <div className='expenseItem2'>
+                        <h5>-$1000</h5>
+                        <div className='expenseItem3'>
+                            <h6>Rent</h6>
+                            <p>01-01-2022</p>
+                        </div>
+                    </div>            
+                    <i className="fas fa-times"></i>
+                </div>
+                <div className='expenseItem'>
+                    <div className='expenseItem2'>
+                        <h5>-$20</h5>
+                        <div className='expenseItem3'>
+                            <h6>Chick Fil A</h6>
+                            <p>01-01-2022</p>
+                        </div>
+                    </div>            
                     <i className="fas fa-times"></i>
                 </div>
             </div>
