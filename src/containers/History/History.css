@@ -15,14 +15,18 @@
 .history-back {
   display: flex;
   justify-content: left;
-  color: #14ba41;
+  color: white;
   padding: 10px 10px 0 10px;
-  background-color: #f5f5f5;
+  background-image: linear-gradient(to right, #8f45ff, #0587eb);
 }
 
 .history-back h6 {
-  color: #14ba41;
+  color: white;
   font-weight: 500;
   margin-left: 5px;
   margin-bottom: 0;
+}
+
+.history-list {
+  margin: 15px;
 }

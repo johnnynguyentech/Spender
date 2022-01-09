@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 
-import Aux from '../../hoc/Aux/Aux';
 import Header from '../../components/Header/Header';
-import Navigation from '../../components/Navigation/Navigation';
 import HistoryMonth from '../../components/HistoryMonth/HistoryMonth';
 import MonthlySpending from '../../components/MonthlySpending/MonthlySpending';
+import Navigation from '../../components/Navigation/Navigation';
+import Aux from '../../hoc/Aux/Aux';
+
 import './History.css';
 
 class History extends Component {
@@ -28,14 +29,16 @@ class History extends Component {
     let historyContent = null;
     if(this.state.historyList){
         historyContent = (
-            <div className='history-list'>
+            <Aux>
                 <h6 className='page-title'>History</h6>
-                <HistoryMonth  onClick={()=>this.historyContentHandler()}/>
-                <HistoryMonth  onClick={()=>this.historyContentHandler()}/>
-                <HistoryMonth  onClick={()=>this.historyContentHandler()}/>
-                <HistoryMonth  onClick={()=>this.historyContentHandler()}/>
-                <HistoryMonth  onClick={()=>this.historyContentHandler()}/>
-            </div>
+                <div className='history-list'>
+                    <HistoryMonth  onClick={()=>this.historyContentHandler()}/>
+                    <HistoryMonth  onClick={()=>this.historyContentHandler()}/>
+                    <HistoryMonth  onClick={()=>this.historyContentHandler()}/>
+                    <HistoryMonth  onClick={()=>this.historyContentHandler()}/>
+                    <HistoryMonth  onClick={()=>this.historyContentHandler()}/>
+                </div>
+            </Aux>
         );
     }else if(!this.state.historyList){
         historyContent = (

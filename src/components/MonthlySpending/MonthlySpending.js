@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { PieChart } from 'react-minimal-pie-chart';
+import ReactSvgPieChart from "react-svg-piechart";
 
 import Aux from '../../hoc/Aux/Aux';
 
@@ -14,26 +15,30 @@ class MonthlySpending extends Component {
                 <br></br>
             <div className='monthJumbo'>
                 <h3 className="thisMonth">January 2022</h3>
-            <h6>You've spent:</h6>
-            <h4>$2321</h4>
+                <h6>You spent:</h6>
+                <h4 className="monthAmount">$2321</h4>
             </div>
+            <div className='chartContainer'>
+
             
             <div className='chartWrapper'>
-                <PieChart
+                <ReactSvgPieChart
                     animate = "true"
+                    expandOnHover = "true"
                     data={[
-                        { title: 'Housing', value: 500, color: '#330F0A' },
-                        { title: 'Food', value: 200, color: '#394F49' },
-                        { title: 'Transportation', value: 400, color: '#65743A' },
-                        { title: 'Medical/Health', value: 300, color: '#EFDD8D' },
-                        { title: 'Insurance', value: 200, color: '#F4FDAF' },
-                        { title: 'Recreation', value: 100, color: '#98DFEA' },
-                        { title: 'Clothing', value: 200, color: '#07BEB8' },
-                        { title: 'Personal', value: 300, color: '#EFD9CE' },
-                        { title: 'Travel', value: 250, color: '#E08DAC' },
-                        { title: 'Other', value: 80, color: '#6A7FDB' }
+                        { title: 'Housing', value: 500, color: '#9A47FF' },
+                        { title: 'Food', value: 200, color: '#DF87FF' },
+                        { title: 'Transportation', value: 400, color: '#F1C9FF' },
+                        { title: 'Medical/Health', value: 300, color: '#004BA8' },
+                        { title: 'Insurance', value: 200, color: '#6CBEED' },
+                        { title: 'Recreation', value: 100, color: '#C9F0FF' },
+                        { title: 'Clothing', value: 200, color: '#5B8C5A' },
+                        { title: 'Personal', value: 300, color: '#37FF8B' },
+                        { title: 'Travel', value: 250, color: '#D9F9A5' },
+                        { title: 'Other', value: 80, color: '#EEE3AB' }
                     ]}
                 />
+            </div>
                 <div className='spending'>
                     <div className='spendingCategory1'>
                         <div className='spendingCategory2'>

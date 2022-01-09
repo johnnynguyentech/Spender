@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 
-import Aux from '../../hoc/Aux/Aux';
 import Header from '../../components/Header/Header';
 import Navigation from '../../components/Navigation/Navigation';
+import Aux from '../../hoc/Aux/Aux';
+
 import './Expense.css';
 
 class Expense extends Component {
@@ -17,6 +18,7 @@ class Expense extends Component {
     }
 
     render () {
+        
         let expenseContent = (
             <div className='expenseContent'>
                 <div className='expenseHeader'>
@@ -25,7 +27,7 @@ class Expense extends Component {
                 <div className='expense-form'>
                     <h6 className="page-title">Add Expense</h6>
                     <input className="expense-input" placeholder='Expense Name'></input>
-                    <input className="expense-input" placeholder='Amount'></input>
+                    <input className="expense-input" type="text" value="" data-type="currency" placeholder="Amount"></input>
                     <input className="expense-input" placeholder='Category'></input>
                     <input className="expense-input" placeholder='Date'></input>
                     <button className="addBtn"  onClick={()=>this.AddExpenseHandler()}>ADD EXPENSE</button>
