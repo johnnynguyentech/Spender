@@ -11,9 +11,13 @@ class MonthlySpending extends Component {
       <Aux>
         <div className="MonthlySpending">
             <div className="MonthlySpendingGreen">
-            <h3 className="thisMonth">January 2022</h3>
+                <br></br>
+            <div className='monthJumbo'>
+                <h3 className="thisMonth">January 2022</h3>
             <h6>You've spent:</h6>
             <h4>$2321</h4>
+            </div>
+            
             <div className='chartWrapper'>
                 <PieChart
                     animate = "true"
