@@ -58,3 +58,16 @@
   margin: 0 0 16px 0;
   font-size: 1.5rem;
 }
+
+.loginNote {
+  margin: 0 15px;
+}
+
+.loginNote p :first-child,
+.loginNote p :nth-child(2) {
+  font-size: 1.5rem;
+}
+
+.loginIcon2 {
+  padding: 15px;
+}

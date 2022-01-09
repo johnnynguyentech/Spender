@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from '../../components/Header/Header';
 import Navigation from '../../components/Navigation/Navigation';
-
+import { NavLink } from 'react-router-dom';
 import Aux from '../../hoc/Aux/Aux';
 
 import './Settings.css';
@@ -91,6 +91,12 @@ class Settings extends Component {
                             <p className='logoutBtn'>Log Out</p>
                             <i className="fas fa-chevron-right settingsChevron"></i>
                         </div>
+                        {/* <NavLink to='/logout'>
+                            <div className='settingsItem'>
+                                <p className='logoutBtn'>Log Out</p>
+                                <i className="fas fa-chevron-right settingsChevron"></i>
+                            </div>
+                        </NavLink> */}
                     </div>
                 </div>
                 <Navigation selected="Settings"/>
