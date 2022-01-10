@@ -1,0 +1,18 @@
+.NotFound {
+  text-align: center;
+  background-image: linear-gradient(to right, #8f45ff, #0587eb);
+  height: 100%;
+}
+
+.NotFound h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  padding-top: 150px;
+  color: white;
+}
+
+.NotFound h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: white;
+}

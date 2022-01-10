@@ -24,7 +24,7 @@ class MonthlySpending extends Component {
             <div className='chartWrapper'>
                 <ReactSvgPieChart
                     animate = "true"
-                    expandOnHover = "true"
+                    expandOnHover = {true}
                     data={[
                         { title: 'Housing', value: 500, color: '#9A47FF' },
                         { title: 'Food', value: 200, color: '#DF87FF' },
@@ -42,7 +42,7 @@ class MonthlySpending extends Component {
                 <div className='spending'>
                     <div className='spendingCategory1'>
                         <div className='spendingCategory2'>
-                            <i class="fas fa-square color1"></i>
+                            <i className="fas fa-square color1"></i>
                             <h6>Housing</h6>
                         </div>
                         <div className='spendingCategory3'>
@@ -51,7 +51,7 @@ class MonthlySpending extends Component {
                     </div>
                     <div className='spendingCategory1'>
                         <div className='spendingCategory2'>
-                            <i class="fas fa-square color2"></i>
+                            <i className="fas fa-square color2"></i>
                             <h6>Food</h6>
                         </div>
                         <div className='spendingCategory3'>
@@ -60,7 +60,7 @@ class MonthlySpending extends Component {
                     </div>
                     <div className='spendingCategory1'>
                         <div className='spendingCategory2'>
-                            <i class="fas fa-square color3"></i>
+                            <i className="fas fa-square color3"></i>
                             <h6>Transportation</h6>
                         </div>
                         <div className='spendingCategory3'>
@@ -69,7 +69,7 @@ class MonthlySpending extends Component {
                     </div>
                     <div className='spendingCategory1'>
                         <div className='spendingCategory2'>
-                            <i class="fas fa-square color4"></i>
+                            <i className="fas fa-square color4"></i>
                             <h6>Medical/Health</h6>
                         </div>
                         <div className='spendingCategory3'>
@@ -78,7 +78,7 @@ class MonthlySpending extends Component {
                     </div>
                     <div className='spendingCategory1'>
                         <div className='spendingCategory2'>
-                            <i class="fas fa-square color5"></i>
+                            <i className="fas fa-square color5"></i>
                             <h6>Insurance</h6>
                         </div>
                         <div className='spendingCategory3'>
@@ -87,7 +87,7 @@ class MonthlySpending extends Component {
                     </div>
                     <div className='spendingCategory1'>
                         <div className='spendingCategory2'>
-                            <i class="fas fa-square color6"></i>
+                            <i className="fas fa-square color6"></i>
                             <h6>Recreation</h6>
                         </div>
                         <div className='spendingCategory3'>
@@ -96,7 +96,7 @@ class MonthlySpending extends Component {
                     </div>
                     <div className='spendingCategory1'>
                         <div className='spendingCategory2'>
-                            <i class="fas fa-square color7"></i>
+                            <i className="fas fa-square color7"></i>
                             <h6>Clothing</h6>
                         </div>
                         <div className='spendingCategory3'>
@@ -105,7 +105,7 @@ class MonthlySpending extends Component {
                     </div>
                     <div className='spendingCategory1'>
                         <div className='spendingCategory2'>
-                            <i class="fas fa-square color8"></i>
+                            <i className="fas fa-square color8"></i>
                             <h6>Personal</h6>
                         </div>
                         <div className='spendingCategory3'>
@@ -114,7 +114,7 @@ class MonthlySpending extends Component {
                     </div>
                     <div className='spendingCategory1'>
                         <div className='spendingCategory2'>
-                            <i class="fas fa-square color9"></i>
+                            <i className="fas fa-square color9"></i>
                             <h6>Travel</h6>
                         </div>
                         <div className='spendingCategory3'>
@@ -123,7 +123,7 @@ class MonthlySpending extends Component {
                     </div>
                     <div className='spendingCategory1'>
                         <div className='spendingCategory2'>
-                            <i class="fas fa-square color10"></i>
+                            <i className="fas fa-square color10"></i>
                             <h6>Other</h6>
                         </div>
                         <div className='spendingCategory3'>

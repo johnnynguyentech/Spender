@@ -59,47 +59,46 @@ class Login extends Component {
 
         // Error in logging in or signing up
         let errorMsg = null;
-        // if(this.props.error) {
-        // if(true) {
-        //     if(this.props.error.message === 'INVALID_PASSWORD') {
-        //         errorMsg = (
-        //         <div className='loginNote'>
-        //             <p className='m-0'><i className="fas fa-exclamation-circle"></i><strong> Let's try that again</strong></p>
-        //             <p>The password you entered is incorrect. Try again, or choose another login option.</p>
-        //         </div>
-        //         )
-        //         loginIcon = (
-        //             <i className="far fa-user-circle fa-10x loginIcon2"></i>
-        //         )
-        //     }
-        //     else if (this.props.error.message === 'EMAIL_NOT_FOUND') {
-        //         errorMsg = (
-        //         <div>
-        //             <p className='m-0'><i className="fas fa-exclamation-circle"></i><strong> Let's try that again</strong></p>
-        //             <p>The email you entered is incorrect. Try again, or choose another login option.</p>
-        //         </div>
-        //         )
-        //         loginIcon = (
-        //             <i className="far fa-user-circle fa-10x loginIcon2"></i>
-        //         )
-        //     }
-        //     else if (this.props.error.message === 'EMAIL_EXISTS') {
-        //         errorMsg = (
-        //         <div>
-        //             <p className='m-0'><i className="fas fa-exclamation-circle"></i><strong> Let's try that again</strong></p>
-        //             <p>The email you entered already exists.</p>
-        //         </div>
-        //         )
-        //         loginIcon = (
-        //             <i className="far fa-user-circle fa-10x loginIcon2"></i>
-        //         )
-        //     }
-        // } 
+        if(this.props.error) {
+            if(this.props.error.message === 'INVALID_PASSWORD') {
+                errorMsg = (
+                <div className='loginNote'>
+                    <p className='m-0'><i className="fas fa-exclamation-circle"></i><strong> Let's try that again</strong></p>
+                    <p>The password you entered is incorrect. Try again, or choose another login option.</p>
+                </div>
+                )
+                loginIcon = (
+                    <i className="far fa-user-circle fa-10x loginIcon2"></i>
+                )
+            }
+            else if (this.props.error.message === 'EMAIL_NOT_FOUND') {
+                errorMsg = (
+                <div>
+                    <p className='m-0'><i className="fas fa-exclamation-circle"></i><strong> Let's try that again</strong></p>
+                    <p>The email you entered is incorrect. Try again, or choose another login option.</p>
+                </div>
+                )
+                loginIcon = (
+                    <i className="far fa-user-circle fa-10x loginIcon2"></i>
+                )
+            }
+            else if (this.props.error.message === 'EMAIL_EXISTS') {
+                errorMsg = (
+                <div>
+                    <p className='m-0'><i className="fas fa-exclamation-circle"></i><strong> Let's try that again</strong></p>
+                    <p>The email you entered already exists.</p>
+                </div>
+                )
+                loginIcon = (
+                    <i className="far fa-user-circle fa-10x loginIcon2"></i>
+                )
+            }
+        } 
 
         // If logged in, redirect to todo page
-        // if (this.props.token !== null) {
-        //     return (<Redirect to='/' />);
-        // }
+        if (this.props.token !== null) {
+            return (<Redirect to='/home' />);
+        }
 
         return (
         <Aux>
@@ -133,26 +132,25 @@ class Login extends Component {
                     {signOrLog}
             </div>
         </Aux>
-        )
+        );
     }
 }
 
+const mapStateToProps = state => {
+    return {
+      error: state.error,
+      token: state.token
+    }
+}
+  
+  
+const mapDispatchToProps = dispatch => {
+    return {
+      onAuth: (email, password, isSignUp) => dispatch(actions.auth(email, password, isSignUp))
+    }
+}
+  
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
 
-// const mapStateToProps = state => {
-//     return {
-//       error: state.error,
-//       token: state.token
-//     }
-// }
-  
-  
-// const mapDispatchToProps = dispatch => {
-//     return {
-//       onAuth: (email, password, isSignUp) => dispatch(actions.auth(email, password, isSignUp))
-//     }
-// }
-  
-// export default connect(mapStateToProps, mapDispatchToProps)(Login);
-
-export default Login;
+// export default Login;
   

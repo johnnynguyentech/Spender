@@ -87,16 +87,16 @@ class Settings extends Component {
                         {helpCenter1}
                         {helpCenter2}
                         <h5>Account Settings</h5>
-                        <div className='settingsItem' onClick={() => this.props.history.push("/")}>
+                        {/* <div className='settingsItem' onClick={() => this.props.history.push("/")}>
                             <p className='logoutBtn'>Log Out</p>
                             <i className="fas fa-chevron-right settingsChevron"></i>
-                        </div>
-                        {/* <NavLink to='/logout'>
+                        </div> */}
+                        <NavLink to='/logout'>
                             <div className='settingsItem'>
                                 <p className='logoutBtn'>Log Out</p>
                                 <i className="fas fa-chevron-right settingsChevron"></i>
                             </div>
-                        </NavLink> */}
+                        </NavLink>
                     </div>
                 </div>
                 <Navigation selected="Settings"/>
