@@ -22,7 +22,7 @@ class Expense extends Component {
         let expenseContent = (
             <div className='expenseContent'>
                 <div className='expenseHeader'>
-                    <i class="fas fa-search-dollar fa-10x"></i>
+                    <i className="fas fa-search-dollar fa-10x"></i>
                 </div>
                 <div className='expense-form'>
                     <h6 className="page-title">Add Expense</h6>
@@ -41,7 +41,7 @@ class Expense extends Component {
         if(this.state.expenseConfirm){
             expenseContent = (
                 <div className='expenseSuccess'>
-                    <i class="fas fa-check-circle fa-8x"></i>
+                    <i className="fas fa-check-circle fa-8x"></i>
                     <h4>SUCCESS!</h4>
                     <p>Your expense has been logged.</p>
                     <button className='goToHome' onClick={() => this.props.history.push("/home")}>GO TO HOME</button>
