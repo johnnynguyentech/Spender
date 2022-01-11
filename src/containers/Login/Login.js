@@ -98,7 +98,11 @@ class Login extends Component {
 
         // If logged in, redirect to todo page
         if (this.props.token !== null) {
-            // axios.put('/users.json', this.props.userId);
+            const test = {
+                email: this.state.email,
+                userId: this.props.userId
+            }
+            axios.put('https://try-spender-default-rtdb.firebaseio.com/users/'+ this.props.userId +'.json', test);
             // console.log(this.props.userId)
             return (<Redirect to='/home' />);
         }

@@ -75,7 +75,6 @@ export const authStart = () => {
         }
         axios.post(url, authData)
         .then(response => {
-            axios.post('https://try-spender-default-rtdb.firebaseio.com/users.json',response.data.localId);
             const expireTime = new Date(new Date().getTime() + response.data.expiresIn * 1000);
             localStorage.setItem('token', response.data.idToken)
             localStorage.setItem('expireTime', expireTime)

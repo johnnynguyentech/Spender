@@ -5,7 +5,7 @@
   grid-template-rows: 1fr;
   border-top: 1px solid #bdbdbd;
   height: 80px;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   /* width: 100%; */
 }
