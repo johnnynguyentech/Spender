@@ -6,6 +6,7 @@ import Aux from '../../hoc/Aux/Aux';
 
 import * as actions from '../../store/actions';
 import {connect} from 'react-redux';
+import axios from '../../axios-instance';
 
 class Login extends Component {
     state = {
@@ -97,6 +98,8 @@ class Login extends Component {
 
         // If logged in, redirect to todo page
         if (this.props.token !== null) {
+            // axios.put('/users.json', this.props.userId);
+            // console.log(this.props.userId)
             return (<Redirect to='/home' />);
         }
 
@@ -139,7 +142,8 @@ class Login extends Component {
 const mapStateToProps = state => {
     return {
       error: state.error,
-      token: state.token
+      token: state.token,
+      userId: state.userId
     }
 }
   

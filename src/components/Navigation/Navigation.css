@@ -7,7 +7,7 @@
   height: 80px;
   position: absolute;
   bottom: 0;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .NavItem {
@@ -30,6 +30,6 @@
 /* Desktop */
 @media only screen and (min-device-width: 576px) {
   .Navigation {
-    width: 576px;
+    /* width: 100%; */
   }
 }

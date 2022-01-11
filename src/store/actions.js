@@ -63,28 +63,29 @@ export const authStart = () => {
   
   export const auth = (email , password, isSignUp) => {
     return dispatch => {
-      dispatch(authStart());
-      const authData = {
-        email: email,
-        password: password,
-        returnSecureToken: true
-      };
-      let url = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDkbtV6WTvhJNHxonaXEayGgvWFVfabcG8'
-      if (!isSignUp) {
-        url = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyDkbtV6WTvhJNHxonaXEayGgvWFVfabcG8'
-      }
-      axios.post(url, authData)
+        dispatch(authStart());
+        const authData = {
+            email: email,
+            password: password,
+            returnSecureToken: true
+        };
+        let url = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDkbtV6WTvhJNHxonaXEayGgvWFVfabcG8'
+        if (!isSignUp) {
+            url = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyDkbtV6WTvhJNHxonaXEayGgvWFVfabcG8'
+        }
+        axios.post(url, authData)
         .then(response => {
-          const expireTime = new Date(new Date().getTime() + response.data.expiresIn * 1000);
-          localStorage.setItem('token', response.data.idToken)
-          localStorage.setItem('expireTime', expireTime)
-          localStorage.setItem('userId', response.data.localId)
-          dispatch(authSuccess(response.data.idToken, response.data.localId))
-          dispatch(checkAuthTime(response.data.expiresIn))
-        })
+            axios.post('https://try-spender-default-rtdb.firebaseio.com/users.json',response.data.localId);
+            const expireTime = new Date(new Date().getTime() + response.data.expiresIn * 1000);
+            localStorage.setItem('token', response.data.idToken)
+            localStorage.setItem('expireTime', expireTime)
+            localStorage.setItem('userId', response.data.localId)
+            dispatch(authSuccess(response.data.idToken, response.data.localId))
+            dispatch(checkAuthTime(response.data.expiresIn))
+            })
         .catch(error => {
-          console.log(error.response.data.error.message);
-          dispatch(authFail(error.response.data.error))
+            console.log(error.response.data.error.message);
+            dispatch(authFail(error.response.data.error))
         })
     }
   }

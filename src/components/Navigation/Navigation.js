@@ -17,10 +17,12 @@ class Navigation extends Component {
   }
 
   render () {
+    let height= window.innerHeight;
+    height = Math.round(height * 0.46) + 1;
     let footer = null;
     if(this.state.selectedNav === "Home"){
         footer = (
-            <div className='Navigation'>
+            <div className='Navigation' style={{width: height}}>
                 <div className='NavItem NavItemSelected' onClick={() => this.props.history.push("/home")}>
                     <i className="fas fa-home fa-2x"></i>
                     <h6>Home</h6>
@@ -41,7 +43,7 @@ class Navigation extends Component {
         );
     }else if(this.state.selectedNav === "Expense"){
         footer = (
-            <div className='Navigation'>
+            <div className='Navigation' style={{width: height}}>
                 <div className='NavItem' onClick={() => this.props.history.push("/home")}>
                     <i className="fas fa-home fa-2x"></i>
                     <h6>Home</h6>
@@ -62,7 +64,7 @@ class Navigation extends Component {
         );
     }else if(this.state.selectedNav === "History"){
         footer = (
-            <div className='Navigation'>
+            <div className='Navigation' style={{width: height}}>
                 <div className='NavItem' onClick={() => this.props.history.push("/home")}>
                     <i className="fas fa-home fa-2x"></i>
                     <h6>Home</h6>
@@ -83,7 +85,7 @@ class Navigation extends Component {
         );
     }else if(this.state.selectedNav === "Settings"){
         footer = (
-            <div className='Navigation'>
+            <div className='Navigation' style={{width: height}}>
                 <div className='NavItem' onClick={() => this.props.history.push("/home")}>
                     <i className="fas fa-home fa-2x"></i>
                     <h6>Home</h6>
